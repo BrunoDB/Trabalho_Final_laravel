@@ -18,19 +18,16 @@
                             <th>Nome</th>
                             <th>idcidade</th>
                             <th>idTime</th>
-                            <th>idTime</th>
                             <th>Editar</th>
                             <th>Remover</th>
                         </thead>
                         <tbody>
-                            <!-- @foreach($lista_torcedores as $torcedor) -->
-                            @foreach(array_combine($lista_torcedores,$lista_times) as $torcedor => $time)
+                            @foreach($lista_torcedores as $torcedor)
                             <tr>
                                 <td>{{ $torcedor->id }}</td>
                                 <td>{{ $torcedor->nome }}</td>
                                 <td>{{ $torcedor->idcidade }}</td>
                                 <td>{{ $torcedor->idTime }}</td>
-                                <td>{{ $time->nome }}</td>
                                 <td>
                                     <a class="btn btn-warning" href="{{ route('torcedor.edit', ['id'=>$torcedor->id]) }}">Editar</a>
                                 </td>
